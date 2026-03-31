@@ -1,0 +1,2989 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Edmfeed - Performance Marketing Agency in Delhi. We help brands scale using Meta Ads, Google Ads & high-converting websites. ₹24.5L+ revenue generated."
+    />
+    <meta
+      name="keywords"
+      content="performance marketing agency Delhi, Meta Ads agency India, Google Ads management Delhi NCR, eCommerce marketing agency"
+    />
+    <title>
+      Edmfeed | Performance Marketing Agency That Drives Real Revenue
+    </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Syne:wght@700;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg: #060d1a;
+        --bg2: rgba(10, 25, 47, 0.55);
+        --green: #00ffab;
+        --cyan: #00d1ff;
+        --text: #e8f4f8;
+        --muted: #6b8aa0;
+        --border: rgba(0, 255, 171, 0.12);
+        --bdim: rgba(255, 255, 255, 0.06);
+        --gg: 0 0 48px rgba(0, 255, 171, 0.22);
+        --gc: 0 0 48px rgba(0, 209, 255, 0.18);
+      }
+      *,
+      *::before,
+      *::after {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        background: var(--bg);
+        color: var(--text);
+        font-family: "Inter", sans-serif;
+        overflow-x: hidden;
+        cursor: none;
+        -webkit-font-smoothing: antialiased;
+      }
+      #cursor {
+        position: fixed;
+        width: 10px;
+        height: 10px;
+        background: var(--green);
+        border-radius: 50%;
+        pointer-events: none;
+        z-index: 9999;
+        transform: translate(-50%, -50%);
+        box-shadow:
+          0 0 14px var(--green),
+          0 0 28px rgba(0, 255, 171, 0.35);
+        transition:
+          width 0.22s,
+          height 0.22s;
+      }
+      #cursor-ring {
+        position: fixed;
+        width: 32px;
+        height: 32px;
+        border: 1.5px solid rgba(0, 255, 171, 0.4);
+        border-radius: 50%;
+        pointer-events: none;
+        z-index: 9998;
+        transform: translate(-50%, -50%);
+        transition:
+          width 0.28s,
+          height 0.28s,
+          border-color 0.28s;
+      }
+      ::-webkit-scrollbar {
+        width: 3px;
+      }
+      ::-webkit-scrollbar-track {
+        background: var(--bg);
+      }
+      ::-webkit-scrollbar-thumb {
+        background: var(--green);
+        border-radius: 2px;
+      }
+
+      /* NAV */
+      nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px 6%;
+        background: rgba(6, 13, 26, 0.82);
+        backdrop-filter: blur(24px);
+        border-bottom: 1px solid rgba(0, 255, 171, 0.07);
+        transition:
+          padding 0.3s,
+          border-color 0.3s;
+      }
+      nav.scrolled {
+        padding: 13px 6%;
+        border-bottom-color: rgba(0, 255, 171, 0.14);
+      }
+      .logo {
+        font-family: "Inter", sans-serif;
+        font-size: 1.5rem;
+        font-weight: 800;
+        background: linear-gradient(135deg, var(--green), var(--cyan));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      .nl {
+        display: flex;
+        gap: 2rem;
+        list-style: none;
+        align-items: center;
+      }
+      .nl a {
+        color: var(--muted);
+        text-decoration: none;
+        font-size: 0.86rem;
+        font-weight: 500;
+        transition: color 0.3s;
+        position: relative;
+      }
+      .nl a::after {
+        content: "";
+        position: absolute;
+        bottom: -3px;
+        left: 0;
+        width: 0;
+        height: 1px;
+        background: var(--green);
+        transition: width 0.3s;
+      }
+      .nl a:hover {
+        color: var(--text);
+      }
+      .nl a:hover::after {
+        width: 100%;
+      }
+      .ncta {
+        background: linear-gradient(135deg, var(--green), var(--cyan));
+        color: #060d1a !important;
+        padding: 9px 20px;
+        border-radius: 7px;
+        font-weight: 700;
+        font-size: 0.82rem;
+        cursor: pointer;
+        transition:
+          box-shadow 0.3s,
+          transform 0.2s;
+      }
+      .ncta:hover {
+        box-shadow: var(--ggg);
+        transform: translateY(-1px);
+      }
+      .hbg {
+        display: none;
+        flex-direction: column;
+        gap: 5px;
+        cursor: pointer;
+      }
+      .hbg span {
+        width: 22px;
+        height: 2px;
+        background: var(--green);
+        border-radius: 2px;
+      }
+
+      /* HERO */
+      .hero {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        overflow: hidden;
+        padding: 130px 6% 90px;
+      }
+      .hbg2 {
+        position: absolute;
+        inset: 0;
+        background:
+          radial-gradient(
+            ellipse 65% 55% at 50% 18%,
+            rgba(0, 255, 171, 0.07),
+            transparent 70%
+          ),
+          radial-gradient(
+            ellipse 45% 45% at 84% 78%,
+            rgba(0, 209, 255, 0.06),
+            transparent 60%
+          ),
+          radial-gradient(
+            ellipse 35% 35% at 18% 72%,
+            rgba(123, 94, 234, 0.05),
+            transparent 60%
+          );
+      }
+      .grid {
+        position: absolute;
+        inset: 0;
+        background-image:
+          linear-gradient(rgba(0, 255, 171, 0.033) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(0, 255, 171, 0.033) 1px, transparent 1px);
+        background-size: 58px 58px;
+        mask-image: radial-gradient(
+          ellipse at center,
+          rgba(0, 0, 0, 0.8),
+          transparent 72%
+        );
+      }
+      .orb {
+        position: absolute;
+        border-radius: 50%;
+        filter: blur(90px);
+        pointer-events: none;
+        animation: flt 9s ease-in-out infinite;
+      }
+      .o1 {
+        width: 420px;
+        height: 420px;
+        background: rgba(0, 255, 171, 0.07);
+        top: -8%;
+        right: -5%;
+      }
+      .o2 {
+        width: 320px;
+        height: 320px;
+        background: rgba(0, 209, 255, 0.06);
+        bottom: -2%;
+        left: -4%;
+        animation-delay: 3s;
+      }
+      .o3 {
+        width: 210px;
+        height: 210px;
+        background: rgba(123, 94, 234, 0.07);
+        top: 40%;
+        right: 20%;
+        animation-delay: 5.5s;
+      }
+      @keyframes flt {
+        0%,
+        100% {
+          transform: translateY(0) scale(1);
+        }
+        50% {
+          transform: translateY(-26px) scale(1.03);
+        }
+      }
+      .hc {
+        position: relative;
+        z-index: 2;
+        max-width: 840px;
+        text-align: center;
+      }
+      .badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 9px;
+        background: rgba(0, 255, 171, 0.07);
+        border: 1px solid rgba(0, 255, 171, 0.17);
+        padding: 7px 18px;
+        border-radius: 100px;
+        font-size: 0.72rem;
+        color: var(--green);
+        font-weight: 700;
+        margin-bottom: 2rem;
+        letter-spacing: 0.8px;
+        text-transform: uppercase;
+        animation: fd 0.8s ease both;
+      }
+      .bdot {
+        width: 6px;
+        height: 6px;
+        background: var(--green);
+        border-radius: 50%;
+        box-shadow: 0 0 7px var(--green);
+        animation: pulse 2s infinite;
+      }
+      @keyframes pulse {
+        0%,
+        100% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0.4;
+        }
+      }
+      @keyframes fd {
+        from {
+          opacity: 0;
+          transform: translateY(-16px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      @keyframes fu {
+        from {
+          opacity: 0;
+          transform: translateY(26px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .hero h1 {
+        font-family: "Inter", sans-serif;
+        font-size: clamp(2.3rem, 5vw, 3.9rem);
+        font-weight: 800;
+        line-height: 1.2;
+        letter-spacing: -1.5px;
+        margin-bottom: 1.5rem;
+        animation: fu 0.9s ease 0.2s both;
+      }
+      .hl {
+        background: linear-gradient(135deg, var(--green), var(--cyan));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      .hero p {
+        font-size: 1.08rem;
+        color: var(--muted);
+        line-height: 1.78;
+        max-width: 610px;
+        margin: 30px auto 2.5rem;
+        font-weight: 400;
+        animation: fu 0.9s ease 0.35s both;
+      }
+      .ctas {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        flex-wrap: wrap;
+        animation: fu 0.9s ease 0.5s both;
+      }
+      .bp {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: linear-gradient(135deg, var(--green), var(--cyan));
+        color: #060d1a;
+        padding: 14px 30px;
+        border-radius: 9px;
+        font-weight: 700;
+        font-size: 0.9rem;
+        text-decoration: none;
+        letter-spacing: 0.2px;
+        transition: all 0.3s;
+        border: none;
+        cursor: pointer;
+        font-family: "Inter", sans-serif;
+        position: relative;
+        overflow: hidden;
+      }
+      .bp::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: rgba(255, 255, 255, 0.15);
+        opacity: 0;
+        transition: opacity 0.3s;
+      }
+      .bp:hover {
+        box-shadow: var(--gg);
+        transform: translateY(-2px);
+      }
+      .bp:hover::before {
+        opacity: 1;
+      }
+      .bs {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: transparent;
+        color: var(--text);
+        padding: 13px 28px;
+        border-radius: 9px;
+        font-weight: 600;
+        font-size: 0.9rem;
+        text-decoration: none;
+        border: 1.5px solid rgba(255, 255, 255, 0.11);
+        transition: all 0.3s;
+        cursor: pointer;
+        font-family: "Inter", sans-serif;
+      }
+      .bs:hover {
+        border-color: var(--cyan);
+        color: var(--cyan);
+      }
+      .trust {
+        margin-top: 2rem;
+        color: var(--muted);
+        font-size: 0.8rem;
+        animation: fu 0.9s ease 0.65s both;
+      }
+      .trust span {
+        color: var(--green);
+        font-weight: 600;
+      }
+
+      /* PROOF */
+      .ps {
+        padding: 46px 0;
+        border-top: 1px solid var(--border);
+        border-bottom: 1px solid var(--border);
+        background: rgba(0, 255, 171, 0.015);
+        overflow: hidden;
+      }
+      .pt {
+        display: flex;
+        gap: 4rem;
+        padding: 0 2rem;
+        align-items: center;
+        white-space: nowrap;
+        animation: mq 22s linear infinite;
+      }
+      @keyframes mq {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(-50%);
+        }
+      }
+      .pi {
+        display: flex;
+        align-items: center;
+        gap: 1.1rem;
+        flex-shrink: 0;
+      }
+      .pn {
+        font-family: "Inter", sans-serif;
+        font-size: 1.85rem;
+        font-weight: 800;
+        background: linear-gradient(135deg, var(--green), var(--cyan));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      .pl {
+        font-size: 0.78rem;
+        color: var(--muted);
+        line-height: 1.45;
+        max-width: 110px;
+        font-weight: 500;
+      }
+      .psep {
+        width: 1px;
+        height: 36px;
+        background: var(--border);
+        flex-shrink: 0;
+      }
+
+      /* GLOBALS */
+      section {
+        padding: 96px 6%;
+        position: relative;
+      }
+      .stag {
+        display: inline-flex;
+        align-items: center;
+        gap: 9px;
+        font-size: 0.7rem;
+        font-weight: 700;
+        letter-spacing: 2.5px;
+        text-transform: uppercase;
+        color: var(--green);
+        margin-bottom: 1rem;
+      }
+      .stag::before {
+        content: "";
+        width: 16px;
+        height: 1.5px;
+        background: var(--green);
+      }
+      .stitle {
+        font-family: "Inter", sans-serif;
+        font-size: clamp(1.7rem, 3.1vw, 2.6rem);
+        font-weight: 800;
+        letter-spacing: -0.4px;
+        line-height: 1.15;
+        margin-bottom: 1rem;
+      }
+      .ssub {
+        font-size: 0.92rem;
+        color: var(--muted);
+        line-height: 1.78;
+        max-width: 540px;
+        font-weight: 400;
+      }
+      .gt {
+        background: linear-gradient(135deg, var(--green), var(--cyan));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      .reveal {
+        opacity: 0;
+        transform: translateY(26px);
+        transition:
+          opacity 0.7s ease,
+          transform 0.7s ease;
+      }
+      .reveal.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      /* ── CASE STUDIES ── */
+      .cases-hdr {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        flex-wrap: wrap;
+        gap: 1rem;
+        margin-bottom: 3.2rem;
+      }
+      .cases-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1px;
+        background: var(--border);
+        border-radius: 22px;
+        overflow: hidden;
+      }
+      .cc {
+        background: var(--bg);
+        padding: 2.4rem;
+        position: relative;
+        cursor: pointer;
+        transition: all 0.4s;
+        overflow: hidden;
+      }
+      .cc::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          135deg,
+          rgba(0, 255, 171, 0.04),
+          rgba(0, 209, 255, 0.02)
+        );
+        opacity: 0;
+        transition: opacity 0.4s;
+      }
+      .cc:hover::before {
+        opacity: 1;
+      }
+      .cn {
+        font-size: 0.62rem;
+        font-weight: 700;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: var(--muted);
+        margin-bottom: 1.1rem;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .cn::before {
+        content: "";
+        width: 12px;
+        height: 1px;
+        background: var(--muted);
+      }
+      .cb {
+        font-family: "Inter", sans-serif;
+        font-size: 1.3rem;
+        font-weight: 800;
+        margin-bottom: 0.25rem;
+      }
+      .cp {
+        font-size: 0.72rem;
+        color: var(--muted);
+        margin-bottom: 1.6rem;
+        font-weight: 500;
+      }
+
+      /* Dashboard mock */
+      .dash {
+        background: rgba(255, 255, 255, 0.025);
+        border: 1px solid rgba(255, 255, 255, 0.055);
+        border-radius: 12px;
+        padding: 1.2rem;
+        margin-bottom: 1.6rem;
+      }
+      .dh {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        margin-bottom: 0.9rem;
+      }
+      .dd {
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+      }
+      .dt {
+        font-size: 0.6rem;
+        color: var(--muted);
+        font-weight: 600;
+        letter-spacing: 0.4px;
+        text-transform: uppercase;
+        margin-left: 5px;
+      }
+      .dm-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.65rem;
+        margin-bottom: 0.9rem;
+      }
+      .dm {
+        background: rgba(0, 255, 171, 0.04);
+        border: 1px solid rgba(0, 255, 171, 0.08);
+        border-radius: 8px;
+        padding: 0.7rem;
+      }
+      .dmv {
+        font-family: "Inter", sans-serif;
+        font-size: 1.1rem;
+        font-weight: 800;
+        background: linear-gradient(135deg, var(--green), var(--cyan));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      .dml {
+        font-size: 0.58rem;
+        color: var(--muted);
+        font-weight: 500;
+        margin-top: 1px;
+        letter-spacing: 0.2px;
+      }
+      .mc {
+        height: 34px;
+        display: flex;
+        align-items: flex-end;
+        gap: 3px;
+      }
+      .mb {
+        flex: 1;
+        border-radius: 3px 3px 0 0;
+        background: linear-gradient(
+          180deg,
+          var(--green),
+          rgba(0, 255, 171, 0.28)
+        );
+      }
+
+      .cmet {
+        display: flex;
+        flex-direction: column;
+        gap: 0.8rem;
+      }
+      .mv {
+        font-family: "Inter", sans-serif;
+        font-size: 1.55rem;
+        font-weight: 800;
+      }
+      .mvg {
+        background: linear-gradient(135deg, var(--green), var(--cyan));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      .ml {
+        font-size: 0.7rem;
+        color: var(--muted);
+        font-weight: 500;
+      }
+      .cpill {
+        display: inline-block;
+        padding: 4px 12px;
+        background: rgba(0, 255, 171, 0.07);
+        border: 1px solid rgba(0, 255, 171, 0.13);
+        border-radius: 100px;
+        font-size: 0.65rem;
+        color: var(--green);
+        font-weight: 700;
+        margin-top: 1.3rem;
+        letter-spacing: 0.4px;
+      }
+      .carr {
+        position: absolute;
+        bottom: 1.8rem;
+        right: 1.8rem;
+        width: 30px;
+        height: 30px;
+        border: 1.5px solid var(--border);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s;
+      }
+      .cc:hover .carr {
+        border-color: var(--green);
+        background: rgba(0, 255, 171, 0.09);
+        transform: rotate(45deg);
+      }
+      .carr svg {
+        width: 13px;
+        height: 13px;
+        stroke: var(--muted);
+        transition: stroke 0.3s;
+      }
+      .cc:hover .carr svg {
+        stroke: var(--green);
+      }
+
+      /* ── HOW WE HELP ── */
+      .hc3 {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.4rem;
+        margin-top: 3.2rem;
+      }
+      .hcard {
+        background: rgba(10, 25, 47, 0.42);
+        border: 1px solid var(--bdim);
+        border-radius: 16px;
+        padding: 2.4rem;
+        transition: all 0.4s;
+        position: relative;
+        overflow: hidden;
+      }
+      .hcard::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 2px;
+        background: linear-gradient(90deg, var(--green), var(--cyan));
+        transform: scaleX(0);
+        transition: transform 0.4s;
+        transform-origin: left;
+      }
+      .hcard:hover {
+        border-color: rgba(0, 255, 171, 0.2);
+        transform: translateY(-6px);
+        box-shadow: var(--gg);
+      }
+      .hcard:hover::after {
+        transform: scaleX(1);
+      }
+      .hi {
+        /* width: 50px;
+        height: 50px;
+        background: rgba(0, 255, 171, 0.08);
+        border: 1px solid rgba(0, 255, 171, 0.15);
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 1.4rem; */
+      }
+      .hi svg{
+        width: 60px;
+        height: 60px;
+        margin-bottom: 20px;
+      }
+      .hcard h3 {
+        font-family: "Inter", sans-serif;
+        font-size: 1.3rem;
+        font-weight: 600;
+        margin-bottom: 0.6rem;
+        letter-spacing: -0.15px;
+      }
+      .hcard p {
+        font-size: 0.84rem;
+        color: var(--muted);
+        line-height: 1.75;
+        font-weight: 400;
+      }
+
+      /* ── SERVICES ── */
+      .sg {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.4rem;
+        margin-top: 3.2rem;
+      }
+      .sc {
+        background: rgba(8, 18, 36, 0.65);
+        border: 1px solid var(--bdim);
+        border-radius: 20px;
+        padding: 2.8rem;
+        cursor: pointer;
+        transition: all 0.45s;
+        position: relative;
+        overflow: hidden;
+      }
+      .sc::before {
+        content: "";
+        position: absolute;
+        top: -1px;
+        left: 0;
+        right: 0;
+        height: 1px;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          var(--green),
+          transparent
+        );
+        transform: scaleX(0);
+        transition: transform 0.5s;
+        transform-origin: center;
+      }
+      .sc::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 160px;
+        height: 160px;
+        border-radius: 50%;
+        background: radial-gradient(
+          circle,
+          rgba(0, 255, 171, 0.05),
+          transparent 70%
+        );
+        transform: translate(40%, -40%);
+        transition: transform 0.5s;
+      }
+      .sc:hover {
+        border-color: rgba(0, 255, 171, 0.2);
+        box-shadow:
+          0 20px 56px rgba(0, 0, 0, 0.4),
+          var(--gg);
+      }
+      .sc:hover::before {
+        transform: scaleX(1);
+      }
+      .sc:hover::after {
+        transform: translate(25%, -25%) scale(1.7);
+      }
+      .snum {
+        font-size: 0.62rem;
+        font-weight: 700;
+        letter-spacing: 2.5px;
+        text-transform: uppercase;
+        color: var(--muted);
+        margin-bottom: 1.6rem;
+      }
+      .siw {
+        /* width: 58px;
+        height: 58px;
+        background: rgba(0, 255, 171, 0.06);
+        border: 1px solid rgba(0, 255, 171, 0.13);
+        border-radius: 14px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 1.6rem;
+        transition: all 0.4s; */
+      }
+      .siw svg {
+        width: 60px;
+        height: 60px;
+        margin-bottom: 20px;
+      }
+      .sc:hover .siw {
+        /* background: rgba(0, 255, 171, 0.11);
+        border-color: rgba(0, 255, 171, 0.26);
+        box-shadow: 0 0 22px rgba(0, 255, 171, 0.13); */
+      }
+      .sc h3 {
+        font-family: "Inter", sans-serif;
+        font-size: 1.28rem;
+        font-weight: 800;
+        margin-bottom: 0.7rem;
+        letter-spacing: -0.3px;
+      }
+      .sc p {
+        font-size: 0.86rem;
+        color: var(--muted);
+        line-height: 1.76;
+        max-width: 340px;
+      }
+      .sl {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        margin-top: 1.6rem;
+        font-size: 0.81rem;
+        font-weight: 600;
+        color: var(--green);
+        background: none;
+        border: none;
+        cursor: pointer;
+        font-family: "Inter", sans-serif;
+        padding: 0;
+      }
+      .sl svg {
+        transition: transform 0.3s;
+      }
+      .sc:hover .sl svg {
+        transform: translateX(4px);
+      }
+
+      /* ── DEEP CASE ── */
+      .dc {
+        background: rgba(0, 255, 171, 0.013);
+        border-top: 1px solid var(--border);
+        border-bottom: 1px solid var(--border);
+      }
+      .dg {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1px;
+        background: var(--border);
+        border-radius: 20px;
+        overflow: hidden;
+      }
+      .dcol {
+        background: var(--bg);
+        padding: 2.4rem 2rem;
+        position: relative;
+      }
+      .dcol::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 3px;
+      }
+      .dcol:nth-child(1)::before {
+        background: rgba(123, 94, 234, 0.7);
+      }
+      .dcol:nth-child(2)::before {
+        background: rgba(0, 209, 255, 0.7);
+      }
+      .dcol:nth-child(3)::before {
+        background: rgba(0, 255, 171, 0.5);
+      }
+      .dcol:nth-child(4)::before {
+        background: linear-gradient(90deg, var(--green), var(--cyan));
+      }
+      .dln {
+        font-size: 0.6rem;
+        font-weight: 700;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: var(--muted);
+        margin-bottom: 0.9rem;
+      }
+      .dcol h3 {
+        font-family: "Inter", sans-serif;
+        font-size: 1.02rem;
+        font-weight: 800;
+        margin-bottom: 1.2rem;
+      }
+      .dcol p,
+      .dcol li {
+        font-size: 0.82rem;
+        color: var(--muted);
+        line-height: 1.8;
+      }
+      .dcol ul {
+        list-style: none;
+      }
+      .dcol li::before {
+        content: "→ ";
+        color: var(--green);
+      }
+      .rb {
+        font-family: "Inter", sans-serif;
+        font-size: 1.85rem;
+        font-weight: 800;
+        background: linear-gradient(135deg, var(--green), var(--cyan));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      .rl {
+        font-size: 0.7rem;
+        color: var(--muted);
+        margin-bottom: 1.3rem;
+      }
+
+      /* ── WHY ── */
+      .wg {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+        align-items: center;
+        margin-top: 2.8rem;
+      }
+      .wps {
+        display: flex;
+        flex-direction: column;
+        gap: 0.9rem;
+      }
+      .wp {
+        display: flex;
+        gap: 1.2rem;
+        align-items: flex-start;
+        padding: 1.3rem;
+        border-radius: 11px;
+        border: 1px solid transparent;
+        transition: all 0.3s;
+      }
+      .wp:hover {
+        border-color: var(--border);
+        background: rgba(0, 255, 171, 0.022);
+      }
+      .wi {
+        width: 42px;
+        height: 42px;
+        background: rgba(0, 255, 171, 0.08);
+        border: 1px solid rgba(0, 255, 171, 0.15);
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+      }
+      .wp h4 {
+        font-weight: 700;
+        margin-bottom: 0.3rem;
+        font-size: 0.9rem;
+        font-family: "Inter", sans-serif;
+      }
+      .wp p {
+        font-size: 0.8rem;
+        color: var(--muted);
+        line-height: 1.65;
+      }
+      .wv {
+        height: 420px;
+        border-radius: 20px;
+        background: rgba(0, 255, 171, 0.02);
+        border: 1px solid var(--border);
+        overflow: hidden;
+      }
+      .pc {
+        padding: 2rem;
+      }
+      .plbl {
+        font-size: 0.66rem;
+        color: var(--muted);
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        margin-bottom: 1.6rem;
+        font-weight: 600;
+      }
+      .bw {
+        display: flex;
+        flex-direction: column;
+        gap: 1.2rem;
+      }
+      .bi {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+      }
+      .bt {
+        display: flex;
+        justify-content: space-between;
+        font-size: 0.7rem;
+        color: var(--muted);
+        font-weight: 500;
+      }
+      .bt span:last-child {
+        color: var(--green);
+        font-weight: 700;
+      }
+      .btr {
+        height: 7px;
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 4px;
+        overflow: hidden;
+      }
+      .bf {
+        height: 100%;
+        border-radius: 4px;
+        background: linear-gradient(90deg, var(--green), var(--cyan));
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 1.3s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+      .bfc {
+        background: linear-gradient(90deg, var(--cyan), var(--green));
+      }
+      .pf {
+        margin-top: 2rem;
+        padding-top: 1.4rem;
+        border-top: 1px solid var(--border);
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.8rem;
+      }
+      .psv {
+        font-family: "Inter", sans-serif;
+        font-size: 1.6rem;
+        font-weight: 800;
+        background: linear-gradient(135deg, var(--green), var(--cyan));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      .psl {
+        font-size: 0.68rem;
+        color: var(--muted);
+        font-weight: 500;
+      }
+
+      /* ── IDEAL ── */
+      .ideal {
+        text-align: center;
+      }
+      .ib {
+        max-width: 730px;
+        margin: 2.8rem auto 0;
+        background: rgba(0, 255, 171, 0.03);
+        border: 1.5px solid rgba(0, 255, 171, 0.18);
+        border-radius: 20px;
+        padding: 3.2rem 4rem;
+        position: relative;
+      }
+      .ii {
+        position: absolute;
+        top: -20px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: var(--bg);
+        padding: 0 14px;
+      }
+      .ib p {
+        font-family: "Inter", sans-serif;
+        font-size: 1.15rem;
+        font-weight: 700;
+        line-height: 1.65;
+        margin-bottom: 1.2rem;
+      }
+      .in {
+        font-size: 0.82rem;
+        color: var(--muted);
+        line-height: 1.7;
+        font-family: "Inter", sans-serif;
+        font-weight: 400;
+      }
+
+      /* ── LOCAL SEO ── */
+      .seosec {
+        background: linear-gradient(
+          180deg,
+          transparent,
+          rgba(0, 255, 171, 0.013),
+          transparent
+        );
+      }
+      .seoin {
+        display: grid;
+        grid-template-columns: 1.1fr 1fr;
+        gap: 5rem;
+        align-items: start;
+      }
+      .seoc p {
+        font-size: 0.88rem;
+        color: var(--muted);
+        line-height: 1.85;
+        margin-top: 1.2rem;
+      }
+      .seotags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.6rem;
+        margin-top: 1.8rem;
+      }
+      .seotag {
+        padding: 6px 15px;
+        background: rgba(0, 255, 171, 0.05);
+        border: 1px solid var(--border);
+        border-radius: 100px;
+        font-size: 0.72rem;
+        color: var(--green);
+        font-weight: 600;
+      }
+      .seostats {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1px;
+        background: var(--border);
+        border-radius: 16px;
+        overflow: hidden;
+        margin-top: 2.5rem;
+      }
+      .seostat {
+        background: var(--bg);
+        padding: 1.6rem;
+        text-align: center;
+      }
+      .ssv {
+        font-family: "Inter", sans-serif;
+        font-size: 1.7rem;
+        font-weight: 800;
+        background: linear-gradient(135deg, var(--green), var(--cyan));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin-bottom: 0.25rem;
+      }
+      .ssl {
+        font-size: 0.7rem;
+        color: var(--muted);
+        font-weight: 500;
+      }
+      .seor {
+        display: flex;
+        flex-direction: column;
+        gap: 0.9rem;
+        padding-top: 0.5rem;
+      }
+      .scard {
+        background: rgba(10, 25, 47, 0.45);
+        border: 1px solid var(--bdim);
+        border-radius: 13px;
+        padding: 1.4rem;
+        display: flex;
+        align-items: flex-start;
+        gap: 0.9rem;
+        transition: all 0.3s;
+      }
+      .scard:hover {
+        border-color: var(--border);
+        transform: translateX(5px);
+      }
+      .sci {
+        width: 36px;
+        height: 36px;
+        background: rgba(0, 255, 171, 0.08);
+        border: 1px solid rgba(0, 255, 171, 0.13);
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+      }
+      .scard h4 {
+        font-size: 0.85rem;
+        font-weight: 700;
+        margin-bottom: 0.28rem;
+        font-family: "Inter", sans-serif;
+      }
+      .scard p {
+        font-size: 0.77rem;
+        color: var(--muted);
+        line-height: 1.6;
+      }
+
+      /* ── FINAL CTA ── */
+      .fcta {
+        text-align: center;
+        padding: 116px 6%;
+        position: relative;
+        overflow: hidden;
+      }
+      .fbg {
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(
+          ellipse 72% 62% at 50% 50%,
+          rgba(0, 255, 171, 0.052),
+          transparent 68%
+        );
+      }
+      .fcta h2 {
+        font-family: "Inter", sans-serif;
+        font-size: clamp(2rem, 4.4vw, 3.3rem);
+        font-weight: 800;
+        letter-spacing: -1px;
+        margin-bottom: 1.3rem;
+        position: relative;
+      }
+      .fcta > p {
+        font-size: 0.97rem;
+        color: var(--muted);
+        margin-bottom: 2.8rem;
+        position: relative;
+        max-width: 460px;
+        margin-left: auto;
+        margin-right: auto;
+        line-height: 1.72;
+      }
+      .fbtns {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        flex-wrap: wrap;
+        position: relative;
+      }
+
+      /* WHATSAPP */
+      .wa {
+        position: fixed;
+        bottom: 28px;
+        right: 28px;
+        width: 52px;
+        height: 52px;
+        background: #25d366;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 999;
+        box-shadow: 0 4px 20px rgba(37, 211, 102, 0.38);
+        transition: all 0.3s;
+        text-decoration: none;
+        animation: pin 0.5s ease 1.2s both;
+      }
+      .wa:hover {
+        transform: scale(1.1);
+        box-shadow: 0 8px 30px rgba(37, 211, 102, 0.48);
+      }
+      @keyframes pin {
+        from {
+          transform: scale(0);
+        }
+        to {
+          transform: scale(1);
+        }
+      }
+
+      /* FOOTER */
+      footer {
+        border-top: 1px solid var(--border);
+        padding: 2.8rem 6%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 1rem;
+      }
+      .fl {
+        font-family: "Inter", sans-serif;
+        font-size: 1.25rem;
+        font-weight: 800;
+        background: linear-gradient(135deg, var(--green), var(--cyan));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      footer p {
+        font-size: 0.76rem;
+        color: var(--muted);
+      }
+
+      /* ── MODAL ── */
+      .mov {
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.78);
+        backdrop-filter: blur(10px);
+        z-index: 5000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1.5rem;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s;
+      }
+      .mov.open {
+        opacity: 1;
+        pointer-events: all;
+      }
+      .mod {
+        background: #091222;
+        border: 1px solid rgba(0, 255, 171, 0.17);
+        border-radius: 22px;
+        padding: 2.8rem;
+        max-width: 476px;
+        width: 100%;
+        position: relative;
+        transform: translateY(18px) scale(0.97);
+        transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+        box-shadow:
+          0 40px 90px rgba(0, 0, 0, 0.72),
+          0 0 55px rgba(0, 255, 171, 0.05);
+      }
+      .mov.open .mod {
+        transform: translateY(0) scale(1);
+      }
+      .mcls {
+        position: absolute;
+        top: 1.1rem;
+        right: 1.2rem;
+        width: 28px;
+        height: 28px;
+        border: 1px solid var(--bdim);
+        border-radius: 7px;
+        background: transparent;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        color: var(--muted);
+        transition: all 0.2s;
+        font-size: 0.9rem;
+        font-family: "Inter", sans-serif;
+      }
+      .mcls:hover {
+        border-color: var(--border);
+        color: var(--text);
+      }
+      .mbadge {
+        display: inline-flex;
+        align-items: center;
+        gap: 7px;
+        background: rgba(0, 255, 171, 0.07);
+        border: 1px solid rgba(0, 255, 171, 0.15);
+        padding: 5px 13px;
+        border-radius: 100px;
+        font-size: 0.68rem;
+        color: var(--green);
+        font-weight: 700;
+        letter-spacing: 0.8px;
+        text-transform: uppercase;
+        margin-bottom: 1.4rem;
+      }
+      .mod h2 {
+        font-family: "Inter", sans-serif;
+        font-size: 1.55rem;
+        font-weight: 800;
+        margin-bottom: 0.45rem;
+        letter-spacing: -0.3px;
+      }
+      .msub {
+        font-size: 0.83rem;
+        color: var(--muted);
+        margin-bottom: 1.8rem;
+        line-height: 1.62;
+      }
+      .fg {
+        margin-bottom: 1.1rem;
+      }
+      .fg label {
+        display: block;
+        font-size: 0.72rem;
+        font-weight: 700;
+        color: var(--muted);
+        margin-bottom: 0.45rem;
+        letter-spacing: 0.4px;
+        text-transform: uppercase;
+      }
+      .fg input,
+      .fg select {
+        width: 100%;
+        background: rgba(255, 255, 255, 0.04);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 8px;
+        padding: 10px 14px;
+        color: var(--text);
+        font-family: "Inter", sans-serif;
+        font-size: 0.86rem;
+        outline: none;
+        transition: all 0.3s;
+      }
+      .fg input:focus,
+      .fg select:focus {
+        border-color: rgba(0, 255, 171, 0.32);
+        background: rgba(0, 255, 171, 0.025);
+        box-shadow: 0 0 0 3px rgba(0, 255, 171, 0.06);
+      }
+      .fg select {
+        cursor: pointer;
+        appearance: none;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%236B8AA0' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-position: right 13px center;
+        background-size: 9px;
+        padding-right: 34px;
+      }
+      .fg select option {
+        background: #091222;
+        color: var(--text);
+      }
+      .fr {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.9rem;
+      }
+      .msub2 {
+        width: 100%;
+        background: linear-gradient(135deg, var(--green), var(--cyan));
+        color: #060d1a;
+        padding: 13px 22px;
+        border-radius: 9px;
+        font-weight: 700;
+        font-size: 0.9rem;
+        border: none;
+        cursor: pointer;
+        font-family: "Inter", sans-serif;
+        margin-top: 0.4rem;
+        transition: all 0.3s;
+      }
+      .msub2:hover {
+        box-shadow: var(--gg);
+        transform: translateY(-1px);
+      }
+      .mn {
+        text-align: center;
+        font-size: 0.7rem;
+        color: var(--muted);
+        margin-top: 0.9rem;
+      }
+
+      @media (max-width: 900px) {
+        .nl {
+          display: none;
+        }
+        .hbg {
+          display: flex;
+        }
+        .cases-grid,
+        .hc3,
+        .sg {
+          grid-template-columns: 1fr;
+        }
+        .dg {
+          grid-template-columns: 1fr 1fr;
+        }
+        .wg,
+        .seoin {
+          grid-template-columns: 1fr;
+        }
+        .ib {
+          padding: 2.2rem 1.6rem;
+        }
+        .fr {
+          grid-template-columns: 1fr;
+        }
+      }
+      @media (max-width: 600px) {
+        .dg {
+          grid-template-columns: 1fr;
+        }
+        section {
+          padding: 68px 5%;
+        }
+        .hero {
+          padding: 108px 5% 68px;
+        }
+        .mod {
+          padding: 2rem 1.4rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="cursor"></div>
+    <div id="cursor-ring"></div>
+
+    <!-- WhatsApp Float -->
+    <a href="#" class="wa cta-trigger" title="WhatsApp Us">
+      <svg width="27" height="27" viewBox="0 0 24 24" fill="white">
+        <path
+          d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"
+        />
+      </svg>
+    </a>
+
+    <!-- MODAL -->
+    <div class="mov" id="modal">
+      <div class="mod">
+        <button class="mcls" id="mcls">✕</button>
+        <div class="mbadge">
+          <span
+            style="
+              width: 5px;
+              height: 5px;
+              background: var(--green);
+              border-radius: 50%;
+              display: inline-block;
+              box-shadow: 0 0 6px var(--green);
+            "
+          ></span>
+          Free Strategy Call
+        </div>
+        <h2>Let's Scale Your Business</h2>
+        <p class="msub">
+          Fill in your details and we'll reach out within 24 hours to book your
+          free strategy call.
+        </p>
+        <div class="fr">
+          <div class="fg">
+            <label>First Name</label><input type="text" placeholder="Rahul" />
+          </div>
+          <div class="fg">
+            <label>Last Name</label><input type="text" placeholder="Sharma" />
+          </div>
+        </div>
+        <div class="fg">
+          <label>Email Address</label
+          ><input type="email" placeholder="rahul@yourbrand.com" />
+        </div>
+        <div class="fg">
+          <label>Phone Number</label
+          ><input type="tel" placeholder="+91 98765 43210" />
+        </div>
+        <div class="fg">
+          <label>Current Monthly Revenue</label>
+          <select>
+            <option value="" disabled selected>Select range</option>
+            <option>Below ₹1L / month</option>
+            <option>₹1L – ₹5L / month</option>
+            <option>₹5L – ₹20L / month</option>
+            <option>₹20L+ / month</option>
+            <option>USD based business</option>
+          </select>
+        </div>
+        <div class="fg">
+          <label>What do you need help with?</label>
+          <select>
+            <option value="" disabled selected>Select service</option>
+            <option>Meta Ads (Facebook & Instagram)</option>
+            <option>Google Ads Management</option>
+            <option>Web Development</option>
+            <option>Landing Pages & Funnels</option>
+            <option>Full Performance Marketing</option>
+          </select>
+        </div>
+        <button class="msub2" id="msubmit">Book My Free Strategy Call →</button>
+        <p class="mn">🔒 No spam. No commitment. 100% free.</p>
+      </div>
+    </div>
+
+    <!-- NAV -->
+    <nav id="nav">
+      <div class="logo">Edmfeed</div>
+      <ul class="nl">
+        <li><a href="#cases">Case Studies</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#why">Why Us</a></li>
+        <li><a href="#" class="ncta cta-trigger">Book a Call →</a></li>
+      </ul>
+      <div class="hbg" id="hbg"><span></span><span></span><span></span></div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hbg2"></div>
+      <div class="grid"></div>
+      <div class="orb o1"></div>
+      <div class="orb o2"></div>
+      <div class="orb o3"></div>
+      <div class="hc">
+        <div class="badge">
+          <span class="bdot"></span>Performance Marketing Agency · Delhi
+        </div>
+        <h1>
+          Scale Your Business with a Marketing Agency That Drives
+          <span class="hl">Real Revenue</span>
+        </h1>
+        <p>
+          We help brands grow from ₹1L to ₹24.5L and generate consistent revenue
+          using Meta Ads, Google Ads & high-converting websites.
+        </p>
+        <div class="ctas">
+          <button class="bp cta-trigger">Book Free Strategy Call →</button>
+          <a href="#cases" class="bs">View Case Studies ↓</a>
+        </div>
+        <p class="trust">
+          Trusted by brands across <span>India & the US</span> ·
+          <span>Multiple Niches</span>
+        </p>
+      </div>
+    </section>
+
+    <!-- PROOF STRIP -->
+    <div class="ps">
+      <div style="overflow: hidden">
+        <div class="pt">
+          <div class="pi">
+            <div>
+              <div class="pn">₹24.5L</div>
+              <div class="pl">Revenue Generated</div>
+            </div>
+          </div>
+          <div class="psep"></div>
+          <div class="pi">
+            <div>
+              <div class="pn">2.6x</div>
+              <div class="pl">Average ROAS</div>
+            </div>
+          </div>
+          <div class="psep"></div>
+          <div class="pi">
+            <div>
+              <div
+                class="pn"
+                style="-webkit-text-fill-color: var(--text); background: none"
+              >
+                IN · US
+              </div>
+              <div class="pl">Clients in India & US</div>
+            </div>
+          </div>
+          <div class="psep"></div>
+          <div class="pi">
+            <div>
+              <div
+                class="pn"
+                style="-webkit-text-fill-color: var(--text); background: none"
+              >
+                D2C
+              </div>
+              <div class="pl">D2C · Service · eCommerce</div>
+            </div>
+          </div>
+          <div class="psep"></div>
+          <div class="pi">
+            <div>
+              <div class="pn">₹24.5L</div>
+              <div class="pl">Revenue Generated</div>
+            </div>
+          </div>
+          <div class="psep"></div>
+          <div class="pi">
+            <div>
+              <div class="pn">2.6x</div>
+              <div class="pl">Average ROAS</div>
+            </div>
+          </div>
+          <div class="psep"></div>
+          <div class="pi">
+            <div>
+              <div
+                class="pn"
+                style="-webkit-text-fill-color: var(--text); background: none"
+              >
+                IN · US
+              </div>
+              <div class="pl">Clients in India & US</div>
+            </div>
+          </div>
+          <div class="psep"></div>
+          <div class="pi">
+            <div>
+              <div
+                class="pn"
+                style="-webkit-text-fill-color: var(--text); background: none"
+              >
+                D2C
+              </div>
+              <div class="pl">D2C · Service · eCommerce</div>
+            </div>
+          </div>
+          <div class="psep"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CASE STUDIES -->
+    <section id="cases">
+      <div class="cases-hdr reveal">
+        <div>
+          <div class="stag">Case Studies</div>
+          <h2 class="stitle">Results That <span class="gt">Speak.</span></h2>
+          <p class="ssub" style="margin-top: 0.5rem">
+            Real dashboards. Real numbers. Real growth.
+          </p>
+        </div>
+        <button class="bs cta-trigger">View All Case Studies →</button>
+      </div>
+      <div class="cases-grid reveal">
+        <!-- Card 1 -->
+        <div class="cc">
+          <div class="cn">01</div>
+          <div class="cb">Homey Crochett</div>
+          <div class="cp">6 Months · D2C · India</div>
+          <div class="dash">
+            <div class="dh">
+              <div class="dd" style="background: #ff5f57"></div>
+              <div class="dd" style="background: #febc2e"></div>
+              <div class="dd" style="background: #28c840"></div>
+              <span class="dt">Meta Ads Manager · Aug – Jan</span>
+            </div>
+            <div class="dm-row">
+              <div class="dm">
+                <div class="dmv">₹24.5L</div>
+                <div class="dml">Purchase Revenue</div>
+              </div>
+              <div class="dm">
+                <div class="dmv">2.60x</div>
+                <div class="dml">ROAS</div>
+              </div>
+            </div>
+            <div class="mc">
+              <div class="mb" style="height: 28%"></div>
+              <div class="mb" style="height: 38%"></div>
+              <div class="mb" style="height: 33%"></div>
+              <div class="mb" style="height: 52%"></div>
+              <div class="mb" style="height: 63%"></div>
+              <div class="mb" style="height: 71%"></div>
+              <div class="mb" style="height: 80%"></div>
+              <div class="mb" style="height: 89%"></div>
+              <div class="mb" style="height: 94%"></div>
+              <div class="mb" style="height: 100%"></div>
+            </div>
+          </div>
+          <div class="cmet">
+            <div>
+              <div class="mv mvg">₹1L → ₹24.5L</div>
+              <div class="ml">Revenue growth in 6 months</div>
+            </div>
+          </div>
+          <div class="cpill">Meta Ads Funnel</div>
+          <div class="carr">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M7 17L17 7M7 7h10v10" />
+            </svg>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="cc">
+          <div class="cn">02</div>
+          <div class="cb">Dynamocks</div>
+          <div class="cp">90 Days · eCommerce · US</div>
+          <div class="dash">
+            <div class="dh">
+              <div class="dd" style="background: #ff5f57"></div>
+              <div class="dd" style="background: #febc2e"></div>
+              <div class="dd" style="background: #28c840"></div>
+              <span class="dt">Shopify Analytics · Q1</span>
+            </div>
+            <div class="dm-row">
+              <div class="dm">
+                <div class="dmv">$3.5K</div>
+                <div class="dml">Total Revenue</div>
+              </div>
+              <div class="dm">
+                <div class="dmv">2.00x</div>
+                <div class="dml">ROAS</div>
+              </div>
+            </div>
+            <div class="mc">
+              <div class="mb" style="height: 8%"></div>
+              <div class="mb" style="height: 14%"></div>
+              <div class="mb" style="height: 20%"></div>
+              <div class="mb" style="height: 35%"></div>
+              <div class="mb" style="height: 48%"></div>
+              <div class="mb" style="height: 58%"></div>
+              <div class="mb" style="height: 69%"></div>
+              <div class="mb" style="height: 80%"></div>
+              <div class="mb" style="height: 90%"></div>
+              <div class="mb" style="height: 100%"></div>
+            </div>
+          </div>
+          <div class="cmet">
+            <div>
+              <div class="mv mvg">$0 → $3.5K</div>
+              <div class="ml">Revenue in 90 days</div>
+            </div>
+          </div>
+          <div class="cpill">US Market Entry</div>
+          <div class="carr">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M7 17L17 7M7 7h10v10" />
+            </svg>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="cc">
+          <div class="cn">03</div>
+          <div class="cb">Dr. Buffalo Med Spa</div>
+          <div class="cp">2 Months · Service · US</div>
+          <div class="dash">
+            <div class="dh">
+              <div class="dd" style="background: #ff5f57"></div>
+              <div class="dd" style="background: #febc2e"></div>
+              <div class="dd" style="background: #28c840"></div>
+              <span class="dt">Google Ads Dashboard</span>
+            </div>
+            <div class="dm-row">
+              <div class="dm">
+                <div class="dmv">$3,272</div>
+                <div class="dml">Revenue</div>
+              </div>
+              <div class="dm">
+                <div class="dmv">2.50x</div>
+                <div class="dml">ROAS</div>
+              </div>
+            </div>
+            <div class="mc">
+              <div class="mb" style="height: 44%"></div>
+              <div class="mb" style="height: 54%"></div>
+              <div class="mb" style="height: 48%"></div>
+              <div class="mb" style="height: 66%"></div>
+              <div class="mb" style="height: 73%"></div>
+              <div class="mb" style="height: 79%"></div>
+              <div class="mb" style="height: 84%"></div>
+              <div class="mb" style="height: 90%"></div>
+              <div class="mb" style="height: 88%"></div>
+              <div class="mb" style="height: 100%"></div>
+            </div>
+          </div>
+          <div class="cmet">
+            <div>
+              <div class="mv mvg">$3,272</div>
+              <div class="ml">Revenue generated in 2 months</div>
+            </div>
+          </div>
+          <div class="cpill">Consistent Lead Flow</div>
+          <div class="carr">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M7 17L17 7M7 7h10v10" />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW WE HELP -->
+    <section>
+      <div class="reveal">
+        <div class="stag">What We Do</div>
+        <h2 class="stitle">How We Help You <span class="gt">Grow</span></h2>
+        <p class="ssub">
+          Outcome-first. Every service we offer is engineered to generate
+          measurable revenue — not just traffic.
+        </p>
+      </div>
+      <div class="hc3 reveal">
+        <div class="hcard">
+          <div class="hi">
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="9"
+                cy="7"
+                r="3.5"
+                stroke="#00FFAB"
+                stroke-width="1.4"
+              />
+              <path
+                d="M2.5 20c0-3.59 2.91-6.5 6.5-6.5s6.5 2.91 6.5 6.5"
+                stroke="#00FFAB"
+                stroke-width="1.4"
+                stroke-linecap="round"
+              />
+              <path
+                d="M18 10.5l2.5 2.5-2.5 2.5"
+                stroke="#00D1FF"
+                stroke-width="1.4"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <line
+                x1="20.5"
+                y1="13"
+                x2="15.5"
+                y2="13"
+                stroke="#00D1FF"
+                stroke-width="1.4"
+                stroke-linecap="round"
+              />
+            </svg>
+          </div>
+          <h3>Generate Consistent Leads</h3>
+          <p>
+            Run Meta & Google Ads that attract qualified buyers every day. We
+            build targeting strategies and funnels that put your offer in front
+            of people ready to convert.
+          </p>
+        </div>
+        <div class="hcard">
+          <div class="hi">
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <polyline
+                points="3.5,18 8,12 12,15 16.5,8 21,12"
+                stroke="#00FFAB"
+                stroke-width="1.4"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <circle cx="21" cy="12" r="1.6" fill="#00D1FF" opacity=".85" />
+              <line
+                x1="3"
+                y1="18.5"
+                x2="21"
+                y2="18.5"
+                stroke="#00FFAB"
+                stroke-width="1.1"
+                stroke-linecap="round"
+                opacity=".3"
+              />
+            </svg>
+          </div>
+          <h3>Scale eCommerce Profitably</h3>
+          <p>
+            From product testing to audience scaling, we build systems that grow
+            your eCommerce revenue with a positive ROAS — so every rupee spent
+            returns more.
+          </p>
+        </div>
+        <div class="hcard">
+          <div class="hi">
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect
+                x="2.5"
+                y="3.5"
+                width="19"
+                height="14"
+                rx="2"
+                stroke="#00FFAB"
+                stroke-width="1.4"
+              />
+              <line
+                x1="2.5"
+                y1="7.5"
+                x2="21.5"
+                y2="7.5"
+                stroke="#00FFAB"
+                stroke-width="1.2"
+                opacity=".4"
+              />
+              <circle cx="6" cy="5.5" r=".9" fill="#00D1FF" />
+              <circle cx="9" cy="5.5" r=".9" fill="#00D1FF" opacity=".55" />
+              <circle cx="12" cy="5.5" r=".9" fill="#00D1FF" opacity=".28" />
+              <line
+                x1="7"
+                y1="11.5"
+                x2="17"
+                y2="11.5"
+                stroke="#00FFAB"
+                stroke-width="1.1"
+                stroke-linecap="round"
+                opacity=".55"
+              />
+              <line
+                x1="7"
+                y1="14"
+                x2="13"
+                y2="14"
+                stroke="#00FFAB"
+                stroke-width="1.1"
+                stroke-linecap="round"
+                opacity=".35"
+              />
+              <path
+                d="M12 18v2.5M9.5 20.5h5"
+                stroke="#00FFAB"
+                stroke-width="1.1"
+                stroke-linecap="round"
+                opacity=".45"
+              />
+            </svg>
+          </div>
+          <h3>Websites That Convert</h3>
+          <p>
+            We build landing pages and funnels engineered for conversion. Every
+            element is designed to turn cold traffic into paying customers — not
+            just visitors.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services">
+      <div class="reveal">
+        <div class="stag">Core Services</div>
+        <h2 class="stitle">Our Core <span class="gt">Services</span></h2>
+        <p class="ssub">
+          Every service is performance-driven. We measure success in revenue,
+          not impressions.
+        </p>
+      </div>
+      <div class="sg reveal">
+        <div class="sc">
+          <div class="snum">Service — 01</div>
+          <div class="siw">
+            <svg
+              width="28"
+              height="28"
+              viewBox="0 0 28 28"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect
+                x="2"
+                y="4"
+                width="24"
+                height="18"
+                rx="3"
+                stroke="#00FFAB"
+                stroke-width="1.4"
+              />
+              <line
+                x1="2"
+                y1="9.5"
+                x2="26"
+                y2="9.5"
+                stroke="#00FFAB"
+                stroke-width="1.3"
+                opacity=".38"
+              />
+              <circle cx="6" cy="7" r="1.1" fill="#00D1FF" />
+              <circle cx="9.5" cy="7" r="1.1" fill="#00D1FF" opacity=".5" />
+              <circle cx="13" cy="7" r="1.1" fill="#00D1FF" opacity=".26" />
+              <path
+                d="M8 16l3.5 2.5 7-5.5"
+                stroke="#00FFAB"
+                stroke-width="1.4"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </div>
+          <h3>Meta Ads</h3>
+          <p>
+            Facebook & Instagram campaigns built around your offer, audience,
+            and revenue goals. Full creative testing, retargeting, and funnel
+            management — all managed for you.
+          </p>
+          <button class="sl cta-trigger">
+            Get Started
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+              <path
+                d="M2 7h10M7 2l5 5-5 5"
+                stroke="#00FFAB"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+        </div>
+
+        <div class="sc">
+          <div class="snum">Service — 02</div>
+          <div class="siw">
+            <svg
+              width="28"
+              height="28"
+              viewBox="0 0 28 28"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="14"
+                cy="14"
+                r="9.5"
+                stroke="#00FFAB"
+                stroke-width="1.4"
+              />
+              <path
+                d="M14 4.5c0 0-4.5 4-4.5 9.5s4.5 9.5 4.5 9.5"
+                stroke="#00FFAB"
+                stroke-width="1.3"
+                stroke-linecap="round"
+                opacity=".5"
+              />
+              <path
+                d="M14 4.5c0 0 4.5 4 4.5 9.5s-4.5 9.5-4.5 9.5"
+                stroke="#00FFAB"
+                stroke-width="1.3"
+                stroke-linecap="round"
+                opacity=".28"
+              />
+              <line
+                x1="4.5"
+                y1="14"
+                x2="23.5"
+                y2="14"
+                stroke="#00FFAB"
+                stroke-width="1.2"
+                stroke-linecap="round"
+                opacity=".38"
+              />
+              <circle cx="14" cy="14" r="2.2" fill="#00D1FF" opacity=".75" />
+            </svg>
+          </div>
+          <h3>Google Ads Management</h3>
+          <p>
+            Search, Shopping, and Performance Max campaigns optimised for
+            high-intent buyers. Every rupee tracked, every keyword refined,
+            every conversion maximised.
+          </p>
+          <button class="sl cta-trigger">
+            Get Started
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+              <path
+                d="M2 7h10M7 2l5 5-5 5"
+                stroke="#00FFAB"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+        </div>
+
+        <div class="sc">
+          <div class="snum">Service — 03</div>
+          <div class="siw">
+            <svg
+              width="28"
+              height="28"
+              viewBox="0 0 28 28"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect
+                x="3"
+                y="4"
+                width="22"
+                height="16"
+                rx="2.5"
+                stroke="#00FFAB"
+                stroke-width="1.4"
+              />
+              <line
+                x1="3"
+                y1="9"
+                x2="25"
+                y2="9"
+                stroke="#00FFAB"
+                stroke-width="1.2"
+                opacity=".35"
+              />
+              <circle cx="6.5" cy="6.5" r="1" fill="#00D1FF" />
+              <circle cx="10" cy="6.5" r="1" fill="#00D1FF" opacity=".52" />
+              <polyline
+                points="9,13.5 11.5,16 15,12 18,14.5"
+                stroke="#00FFAB"
+                stroke-width="1.3"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M11 22l1 -2h4l1 2"
+                stroke="#00FFAB"
+                stroke-width="1.2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                opacity=".5"
+              />
+              <line
+                x1="8.5"
+                y1="22"
+                x2="19.5"
+                y2="22"
+                stroke="#00FFAB"
+                stroke-width="1.2"
+                stroke-linecap="round"
+                opacity=".35"
+              />
+            </svg>
+          </div>
+          <h3>Web Development</h3>
+          <p>
+            Clean, fast-loading websites built for performance and SEO. Designed
+            to build credibility and drive visitors toward a single clear action
+            — converting.
+          </p>
+          <button class="sl cta-trigger">
+            Get Started
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+              <path
+                d="M2 7h10M7 2l5 5-5 5"
+                stroke="#00FFAB"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+        </div>
+
+        <div class="sc">
+          <div class="snum">Service — 04</div>
+          <div class="siw">
+            <svg
+              width="28"
+              height="28"
+              viewBox="0 0 28 28"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M4.5 21V10a2 2 0 012-2h6.5l2 3h7a2 2 0 012 2v8a2 2 0 01-2 2H6.5a2 2 0 01-2-2z"
+                stroke="#00FFAB"
+                stroke-width="1.4"
+              />
+              <line
+                x1="14"
+                y1="12.5"
+                x2="14"
+                y2="18.5"
+                stroke="#00D1FF"
+                stroke-width="1.5"
+                stroke-linecap="round"
+              />
+              <line
+                x1="11"
+                y1="15.5"
+                x2="17"
+                y2="15.5"
+                stroke="#00D1FF"
+                stroke-width="1.5"
+                stroke-linecap="round"
+              />
+            </svg>
+          </div>
+          <h3>Landing Pages & Funnels</h3>
+          <p>
+            High-converting landing pages and sales funnels that move prospects
+            from first click to confirmed purchase. CRO-optimised from day one,
+            not as an afterthought.
+          </p>
+          <button class="sl cta-trigger">
+            Get Started
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+              <path
+                d="M2 7h10M7 2l5 5-5 5"
+                stroke="#00FFAB"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- DEEP CASE STUDY -->
+    <section class="dc">
+      <div class="reveal" style="max-width: 680px; margin-bottom: 3.2rem">
+        <div class="stag">Deep Dive</div>
+        <h2 class="stitle">
+          How We Scaled Homey Crochett to <span class="gt">₹24.5L</span>
+        </h2>
+        <p class="ssub" style="margin-top: 0.5rem">
+          Complete breakdown — strategy, execution, and outcome.
+        </p>
+      </div>
+      <div class="dg reveal">
+        <div class="dcol">
+          <div class="dln">01 — Problem</div>
+          <h3>Low Revenue</h3>
+          <p>
+            Monthly revenue stuck at ~₹1L with no scaling system, inconsistent
+            ad performance, and no structured funnel to convert traffic into
+            orders.
+          </p>
+        </div>
+        <div class="dcol">
+          <div class="dln">02 — Strategy</div>
+          <h3>Blueprint</h3>
+          <ul>
+            <li>Creative testing at scale</li>
+            <li>Full funnel optimisation</li>
+            <li>Retargeting campaigns</li>
+          </ul>
+        </div>
+        <div class="dcol">
+          <div class="dln">03 — Execution</div>
+          <h3>Day-to-Day</h3>
+          <ul>
+            <li>Daily ad optimisation</li>
+            <li>Audience scaling</li>
+            <li>Offer testing & iteration</li>
+          </ul>
+        </div>
+        <div class="dcol">
+          <div class="dln">04 — Results</div>
+          <h3>Outcome</h3>
+          <div class="rb">₹24.5L</div>
+          <div class="rl">Revenue in 6 months</div>
+          <div class="rb">2.6x</div>
+          <div class="rl">ROAS Achieved</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY EDMFEED -->
+    <section id="why">
+      <div class="wg">
+        <div>
+          <div class="stag">Why Us</div>
+          <h2 class="stitle" style="margin-bottom: 2rem">
+            Why Choose<br /><span class="gt">Edmfeed</span>
+          </h2>
+          <div class="wps reveal">
+            <div class="wp">
+              <div class="wi">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                  <path
+                    d="M10 2l2.2 5.9H18l-4.9 3.6 1.9 5.9L10 13.8l-5 3.6 1.9-5.9L2 7.9h5.8L10 2z"
+                    stroke="#00FFAB"
+                    stroke-width="1.3"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+              <div>
+                <h4>Performance-First Approach</h4>
+                <p>
+                  We optimise for revenue, not vanity metrics. Every campaign
+                  decision is tied back to your bottom line.
+                </p>
+              </div>
+            </div>
+            <div class="wp">
+              <div class="wi">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                  <circle
+                    cx="10"
+                    cy="10"
+                    r="7.5"
+                    stroke="#00FFAB"
+                    stroke-width="1.3"
+                  />
+                  <path
+                    d="M10 2.5c0 0-3 3-3 7.5s3 7.5 3 7.5"
+                    stroke="#00FFAB"
+                    stroke-width="1.2"
+                    stroke-linecap="round"
+                    opacity=".45"
+                  />
+                  <path
+                    d="M10 2.5c0 0 3 3 3 7.5s-3 7.5-3 7.5"
+                    stroke="#00FFAB"
+                    stroke-width="1.2"
+                    stroke-linecap="round"
+                    opacity=".25"
+                  />
+                  <line
+                    x1="2.5"
+                    y1="10"
+                    x2="17.5"
+                    y2="10"
+                    stroke="#00FFAB"
+                    stroke-width="1.2"
+                    stroke-linecap="round"
+                    opacity=".35"
+                  />
+                </svg>
+              </div>
+              <div>
+                <h4>Proven in India & US Markets</h4>
+                <p>
+                  Cross-market experience means we know what performs across
+                  currencies, cultures, and competitive landscapes.
+                </p>
+              </div>
+            </div>
+            <div class="wp">
+              <div class="wi">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                  <path
+                    d="M10 1.5v3.2M10 15.3v3.2M3.5 3.5l2.3 2.3M14.2 14.2l2.3 2.3M1.5 10h3.2M15.3 10h3.2M3.5 16.5l2.3-2.3M14.2 5.8l2.3-2.3"
+                    stroke="#00FFAB"
+                    stroke-width="1.3"
+                    stroke-linecap="round"
+                  />
+                  <circle
+                    cx="10"
+                    cy="10"
+                    r="2.8"
+                    stroke="#00D1FF"
+                    stroke-width="1.3"
+                  />
+                </svg>
+              </div>
+              <div>
+                <h4>Fast Testing & Execution</h4>
+                <p>
+                  No slow turnarounds. We test, learn, and scale — keeping you
+                  ahead of what's working in your market right now.
+                </p>
+              </div>
+            </div>
+            <div class="wp">
+              <div class="wi">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                  <polyline
+                    points="2.5,16 6.5,10 10.5,13 15,6.5 18.5,10"
+                    stroke="#00FFAB"
+                    stroke-width="1.3"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <circle
+                    cx="18.5"
+                    cy="10"
+                    r="1.5"
+                    fill="#00D1FF"
+                    opacity=".78"
+                  />
+                  <line
+                    x1="2"
+                    y1="16.5"
+                    x2="18"
+                    y2="16.5"
+                    stroke="#00FFAB"
+                    stroke-width="1"
+                    opacity=".22"
+                  />
+                </svg>
+              </div>
+              <div>
+                <h4>Built for Serious Scaling</h4>
+                <p>
+                  We partner with businesses ready to invest in growth — not
+                  brands testing the waters. Speed and accountability matter.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="wv reveal">
+          <div class="pc">
+            <div class="plbl">Performance Snapshot</div>
+            <div class="bw">
+              <div class="bi">
+                <div class="bt">
+                  <span>Homey Crochett ROAS</span><span>2.60x</span>
+                </div>
+                <div class="btr">
+                  <div class="bf" style="width: 87%" data-bar></div>
+                </div>
+              </div>
+              <div class="bi">
+                <div class="bt">
+                  <span>Dr. Buffalo Med Spa</span><span>2.50x</span>
+                </div>
+                <div class="btr">
+                  <div class="bf" style="width: 83%" data-bar></div>
+                </div>
+              </div>
+              <div class="bi">
+                <div class="bt">
+                  <span>Dynamocks (US)</span><span>2.00x</span>
+                </div>
+                <div class="btr">
+                  <div class="bf bfc" style="width: 67%" data-bar></div>
+                </div>
+              </div>
+              <div class="bi">
+                <div class="bt">
+                  <span>Portfolio Average</span><span>2.37x</span>
+                </div>
+                <div class="btr">
+                  <div class="bf" style="width: 79%" data-bar></div>
+                </div>
+              </div>
+            </div>
+            <div class="pf">
+              <div>
+                <div class="psv">₹24.5L</div>
+                <div class="psl">Revenue generated</div>
+              </div>
+              <div>
+                <div
+                  class="psv"
+                  style="
+                    background: linear-gradient(
+                      135deg,
+                      var(--cyan),
+                      var(--green)
+                    );
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                  "
+                >
+                  2.37x
+                </div>
+                <div class="psl">Average ROAS</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- IDEAL CLIENT -->
+    <section class="ideal">
+      <div class="stag" style="justify-content: center">Ideal Client</div>
+      <h2 class="stitle reveal" style="text-align: center">
+        Is Edmfeed Right <span class="gt">For You?</span>
+      </h2>
+      <div class="ib reveal">
+        <div class="ii">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path
+              d="M12 2.5l2.6 7H22l-5.8 4.2 2.2 7L12 16.8 5.6 20.7l2.2-7L2 9.5h7.4L12 2.5z"
+              stroke="#00FFAB"
+              stroke-width="1.4"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </div>
+        <p>
+          "We work with businesses already investing in marketing — or looking
+          to scale aggressively using paid ads."
+        </p>
+        <p class="in">
+          If you're just starting out or testing the waters, we may not be the
+          best fit yet. We're built for brands ready to grow fast and invest
+          seriously in performance.
+        </p>
+      </div>
+    </section>
+
+    <!-- LOCAL SEO -->
+    <section class="seosec">
+      <div class="seoin">
+        <div class="reveal">
+          <div class="stag">Location</div>
+          <h2 class="stitle">
+            Performance Marketing<br /><span class="gt">Agency in Delhi</span>
+          </h2>
+          <p class="seoc">
+            We help businesses across Delhi NCR — Noida, Gurgaon, South Delhi,
+            and beyond — grow revenue using data-driven paid advertising.
+            Whether you're an eCommerce brand, a service business, or a D2C
+            startup, our team builds and manages campaigns that deliver
+            measurable results.
+          </p>
+          <p class="seoc" style="margin-top: 0.8rem">
+            If you're looking for a performance marketing agency in Delhi that
+            is accountable to real outcomes and not just deliverables, Edmfeed
+            is your growth partner.
+          </p>
+          <div class="seotags">
+            <span class="seotag">Delhi NCR</span
+            ><span class="seotag">Noida</span
+            ><span class="seotag">Gurgaon</span>
+            <span class="seotag">South Delhi</span
+            ><span class="seotag">Meta Ads</span
+            ><span class="seotag">Google Ads</span>
+            <span class="seotag">D2C Brands</span
+            ><span class="seotag">eCommerce</span>
+          </div>
+          <div class="seostats">
+            <div class="seostat">
+              <div class="ssv">₹24.5L</div>
+              <div class="ssl">Revenue Generated</div>
+            </div>
+            <div class="seostat">
+              <div class="ssv">2.6x</div>
+              <div class="ssl">Average ROAS</div>
+            </div>
+            <div class="seostat">
+              <div class="ssv">2+</div>
+              <div class="ssl">Markets Served</div>
+            </div>
+            <div class="seostat">
+              <div class="ssv">3+</div>
+              <div class="ssl">Business Niches</div>
+            </div>
+          </div>
+        </div>
+        <div class="seor reveal">
+          <div class="scard">
+            <div class="sci">
+              <svg width="17" height="17" viewBox="0 0 17 17" fill="none">
+                <circle
+                  cx="8.5"
+                  cy="6"
+                  r="3"
+                  stroke="#00FFAB"
+                  stroke-width="1.2"
+                />
+                <path
+                  d="M3 15c0-3.04 2.46-5.5 5.5-5.5S14 11.96 14 15"
+                  stroke="#00FFAB"
+                  stroke-width="1.2"
+                  stroke-linecap="round"
+                />
+              </svg>
+            </div>
+            <div>
+              <h4>Local Market Expertise</h4>
+              <p>
+                Deep understanding of Delhi NCR consumer behaviour and buying
+                patterns across D2C and service industries.
+              </p>
+            </div>
+          </div>
+          <div class="scard">
+            <div class="sci">
+              <svg width="17" height="17" viewBox="0 0 17 17" fill="none">
+                <rect
+                  x="1.5"
+                  y="3"
+                  width="14"
+                  height="11"
+                  rx="2"
+                  stroke="#00FFAB"
+                  stroke-width="1.2"
+                />
+                <line
+                  x1="1.5"
+                  y1="7"
+                  x2="15.5"
+                  y2="7"
+                  stroke="#00FFAB"
+                  stroke-width="1.1"
+                  opacity=".4"
+                />
+                <line
+                  x1="5"
+                  y1="10.5"
+                  x2="12"
+                  y2="10.5"
+                  stroke="#00FFAB"
+                  stroke-width="1.1"
+                  stroke-linecap="round"
+                />
+              </svg>
+            </div>
+            <div>
+              <h4>Pan-India & US Campaigns</h4>
+              <p>
+                We've built and scaled campaigns for brands operating in India
+                as well as brands entering the US market from scratch.
+              </p>
+            </div>
+          </div>
+          <div class="scard">
+            <div class="sci">
+              <svg width="17" height="17" viewBox="0 0 17 17" fill="none">
+                <polyline
+                  points="2.5,13 5.5,8.5 8.5,11 12,5.5 14.5,8"
+                  stroke="#00FFAB"
+                  stroke-width="1.2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <circle cx="14.5" cy="8" r="1.2" fill="#00D1FF" />
+              </svg>
+            </div>
+            <div>
+              <h4>Revenue-Tracked Reporting</h4>
+              <p>
+                Clear, revenue-focused reporting with every campaign. You always
+                know exactly what your ad spend is returning.
+              </p>
+            </div>
+          </div>
+          <div class="scard">
+            <div class="sci">
+              <svg width="17" height="17" viewBox="0 0 17 17" fill="none">
+                <path
+                  d="M8.5 1.5l1.7 4.8H15l-4.1 3 1.5 4.8L8.5 11.2 4.6 14.1l1.5-4.8L2 6.3h4.8L8.5 1.5z"
+                  stroke="#00FFAB"
+                  stroke-width="1.2"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+            <div>
+              <h4>Multi-Niche Experience</h4>
+              <p>
+                eCommerce, D2C, med-spas, fashion — profitable results across
+                multiple verticals and target audiences.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="fcta" id="contact">
+      <div class="fbg"></div>
+      <div class="stag" style="justify-content: center; position: relative">
+        Get Started
+      </div>
+      <h2 class="reveal">
+        Ready to Scale<br /><span class="gt">Your Business?</span>
+      </h2>
+      <p class="reveal">
+        Book a free strategy call and we'll show you exactly how to grow using
+        paid ads — no fluff, just a clear plan.
+      </p>
+      <div class="fbtns reveal">
+        <button class="bp cta-trigger">Book Free Strategy Call →</button>
+        <button class="bs cta-trigger">WhatsApp Us</button>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="fl">Edmfeed</div>
+      <p>© 2025 Edmfeed. All rights reserved. · Delhi, India</p>
+      <p>Performance Marketing · Meta Ads · Google Ads · Web Dev</p>
+    </footer>
+
+    <script>
+      // CURSOR
+      const cur = document.getElementById("cursor"),
+        ring = document.getElementById("cursor-ring");
+      let mx = 0,
+        my = 0,
+        rx = 0,
+        ry = 0;
+      document.addEventListener("mousemove", (e) => {
+        mx = e.clientX;
+        my = e.clientY;
+        cur.style.left = mx + "px";
+        cur.style.top = my + "px";
+      });
+      (function ar() {
+        rx += (mx - rx) * 0.12;
+        ry += (my - ry) * 0.12;
+        ring.style.left = rx + "px";
+        ring.style.top = ry + "px";
+        requestAnimationFrame(ar);
+      })();
+      document
+        .querySelectorAll("a,button,.cc,.hcard,.sc,.scard")
+        .forEach((el) => {
+          el.addEventListener("mouseenter", () => {
+            cur.style.width = "16px";
+            cur.style.height = "16px";
+            ring.style.width = "48px";
+            ring.style.height = "48px";
+            ring.style.borderColor = "rgba(0,255,171,0.85)";
+          });
+          el.addEventListener("mouseleave", () => {
+            cur.style.width = "10px";
+            cur.style.height = "10px";
+            ring.style.width = "32px";
+            ring.style.height = "32px";
+            ring.style.borderColor = "rgba(0,255,171,0.4)";
+          });
+        });
+
+      // NAVBAR
+      const nav = document.getElementById("nav");
+      window.addEventListener("scroll", () =>
+        nav.classList.toggle("scrolled", scrollY > 50),
+      );
+
+      // SCROLL REVEAL
+      const rio = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((e, i) => {
+            if (e.isIntersecting) {
+              e.target.style.transitionDelay = i * 0.055 + "s";
+              e.target.classList.add("visible");
+              rio.unobserve(e.target);
+            }
+          });
+        },
+        { threshold: 0.1 },
+      );
+      document.querySelectorAll(".reveal").forEach((r) => rio.observe(r));
+
+      // BAR CHART
+      const bio = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((e) => {
+            if (e.isIntersecting) {
+              e.target
+                .querySelectorAll("[data-bar]")
+                .forEach((b) => (b.style.transform = "scaleX(1)"));
+              bio.unobserve(e.target);
+            }
+          });
+        },
+        { threshold: 0.3 },
+      );
+      document.querySelectorAll(".wv").forEach((v) => bio.observe(v));
+
+      // 3D TILT
+      document.querySelectorAll(".sc").forEach((c) => {
+        c.addEventListener("mousemove", (e) => {
+          const r = c.getBoundingClientRect(),
+            x = (e.clientX - r.left) / r.width - 0.5,
+            y = (e.clientY - r.top) / r.height - 0.5;
+          c.style.transform = `perspective(850px) rotateY(${x * 9}deg) rotateX(${-y * 6}deg) translateY(-4px)`;
+        });
+        c.addEventListener("mouseleave", () => (c.style.transform = ""));
+      });
+
+      // MODAL
+      const ov = document.getElementById("modal"),
+        cls = document.getElementById("mcls"),
+        sub = document.getElementById("msubmit");
+      const open = () => {
+        ov.classList.add("open");
+        document.body.style.overflow = "hidden";
+      };
+      const close = () => {
+        ov.classList.remove("open");
+        document.body.style.overflow = "";
+      };
+      document.querySelectorAll(".cta-trigger").forEach((el) =>
+        el.addEventListener("click", (e) => {
+          e.preventDefault();
+          open();
+        }),
+      );
+      cls.addEventListener("click", close);
+      ov.addEventListener("click", (e) => {
+        if (e.target === ov) close();
+      });
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") close();
+      });
+      sub.addEventListener("click", () => {
+        sub.textContent = "Sending...";
+        sub.disabled = true;
+        setTimeout(() => {
+          sub.textContent = "✓ We'll be in touch within 24hrs!";
+          sub.style.background = "linear-gradient(135deg,#00b87a,#00a5c8)";
+        }, 1500);
+      });
+
+      // HAMBURGER
+      document.getElementById("hbg").addEventListener("click", () => {
+        const nl = document.querySelector(".nl");
+        const open = nl.style.display === "flex";
+        nl.style.display = open ? "none" : "flex";
+        if (!open) {
+          Object.assign(nl.style, {
+            flexDirection: "column",
+            position: "absolute",
+            top: "65px",
+            right: "5%",
+            background: "rgba(6,13,26,0.98)",
+            border: "1px solid rgba(0,255,171,0.13)",
+            borderRadius: "14px",
+            padding: "1.1rem 1.6rem",
+            gap: "1.1rem",
+          });
+        }
+      });
+    </script>
+  </body>
+</html>
