@@ -1551,6 +1551,10 @@
         .wg,
         .seoin {
           grid-template-columns: 1fr;
+          text-align: center;
+        }
+        .seotags{
+            justify-content: center;
         }
         .ib {
           padding: 2.2rem 1.6rem;
@@ -2682,6 +2686,22 @@ background-position: center;
   .founder-stats { grid-template-columns: repeat(2,1fr); }
 }
 @media (max-width: 580px) {
-  .founder-section { padding: 68px 5%; }
+  .founder-section { padding: 68px 5%;  text-align: center;}
+  .founder-avatar-wrap{
+    margin: auto;
+  }
   .founder-stats { grid-template-columns: repeat(2,1fr); }
+.footer-branding{
+        display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
+.footer-logo>*,.footer_c > *,.footer-branding > div:nth-child(3){
+    text-align: center;
+}
+}
+
