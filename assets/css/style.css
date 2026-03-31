@@ -1333,8 +1333,9 @@
     
       }
       .footer_c p{
-        font-size: 1rem;
-        color: #fafafa;
+       font-size: 0.9rem;
+    color: var(--muted);
+    margin-bottom: 8px;
       }
       .footer-logo > *{
         text-align:left;
