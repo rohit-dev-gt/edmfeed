@@ -1,0 +1,11 @@
+.my-slide-inner{
+    padding: 0;
+        padding: 0;
+    display: block;
+    padding-bottom: 0;
+    align-items: stretch;
+    min-height: auto;
+}
+.my-slide-inner img{
+    width: 100%;
+}
